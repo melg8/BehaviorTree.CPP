@@ -139,6 +139,7 @@ endif()
 ######################################################
 
 if (UNIX)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
     list(APPEND BT_SOURCE src/shared_library_UNIX.cpp )
 endif()
 
